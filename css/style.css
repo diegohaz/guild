@@ -1,0 +1,452 @@
+/* 
+ * https://github.com/jtrost/Complete-CSS-Reset
+*/
+
+/* Displays for HTML 5 */
+article, aside, audio, command, datagrid, details, dialog, embed, 
+figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+video, wbr {
+	display: block;
+}
+
+bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time {
+	display: inline;
+}
+
+/* Deprecated tags */
+acronym, applet, big, center, dir, font, frame, frameset, noframes, s,
+strike, tt, u, xmp {
+	display: none;
+}
+
+/* Reset styles for all structural tags */
+a, abbr, area, article, aside, audio, b, bdo, blockquote, body, button, 
+canvas, caption, cite, code, col, colgroup, command, datalist, dd, del, 
+details, dialog, dfn, div, dl, dt, em, embed, fieldset, figure, form,
+h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, 
+input, ins, keygen, kbd, label, legend, li, map, mark, menu, meter, nav,
+noscript, object, ol, optgroup, option, output, p, param, pre, progress,
+q, rp, rt, ruby, samp, section, select, small, span, strong, sub, sup, 
+table, tbody, td, textarea, tfoot, th, thead, time, tr, ul, var, video {
+	background: transparent;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	vertical-align: baseline;
+	z-index: 1;
+}
+
+/* Miscellaneous resets */
+body {
+	line-height: 1;
+}
+
+ol, ul, nav {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+ * Android CSS
+*/
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+	line-height: 130%;
+	font-weight: 400;
+	height: 100%;
+	color: #333;
+}
+
+header {
+	position: fixed;
+	background-color: #422D84;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: top .2s linear, background-color .2s linear;
+}
+
+.scroll-down header {
+	top: -64px;
+}
+
+a {
+	color: #333;
+	font-weight: bold;
+}
+
+.header-wrapper {
+	overflow: hidden;
+}
+
+.header-title {
+	position: absolute;
+	font-size: 24px;
+	line-height: 64px;
+	color: #fff;
+	white-space: nowrap;
+	margin: 0 16px;
+}
+
+.header-button + .header-title {
+	left: 56px;
+}
+
+button, input[type="button" i], input[type="submit" i] {
+	line-height: 1em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.header-button {
+	float: right;
+	background: transparent center center no-repeat;
+	background-size: 32px 32px;
+	width: 36px;
+	height: 48px;
+	margin: 8px;
+	text-indent: -999em;
+	overflow: hidden;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.header-button:active {
+	background-color: rgba(0,0,0,.26);
+}
+
+.tabs {
+	margin-left: 60px;
+}
+
+.tabs li {
+	float: left;
+}
+
+.tabs li.active {
+	border-bottom: 2px solid #ddd;
+}
+
+.tabs li a {
+	display: block;
+	line-height: 48px;
+	color: rgba(255,255,255,.6);
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	padding: 0 12px;
+}
+
+.tabs li a:active {
+	background-color: rgba(0,0,0,.26);
+}
+
+.tabs li.active a {
+	color: #fff;
+}
+
+.add-button {
+	position: fixed;
+	background-color: #422D84;
+	background-size: 32px 32px;
+	width: 56px;
+	height: 56px;
+	border-radius: 56px;
+	right: 16px;
+	bottom: 16px;
+	transition: bottom .2s linear
+}
+
+.scroll-down .add-button {
+	bottom: -64px;
+}
+
+.add-button .inner-button {
+	display: block;
+	background: transparent url(../img/ic_add.svg) center center no-repeat;
+	background-size: 24px 24px;
+	width: 100%;
+	height: 100%;
+	text-indent: -999em;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.add-button:active .inner-button {
+	background-color: rgba(0,0,0,.26);
+}
+
+.content {
+	display: none;
+	background-color: rgb(238, 238, 238);
+	padding-top: 112px;
+	min-height: 100%;
+}
+
+.content.all {
+	display: block;
+}
+
+.date {
+	font-size: 24px;
+	margin: 16px auto;
+	max-width: 744px;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.26);
+	margin: 8px auto;
+	font-size: 14px;
+	max-width: 744px;
+}
+
+.card-header {
+	padding: 16px;
+	overflow: hidden;
+}
+
+.card-group-icon {
+	float: left;
+	background: #aaa url(../img/ic_group.svg) center center no-repeat;
+	background-size: 24px 24px;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	margin-right: 16px;
+}
+
+.card-title {
+	display: block;
+	color: #000;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.card-author {
+	font-size: 12px;
+	line-height: 20px;
+	color: #aaa;
+}
+
+.card-author strong {
+	font-weight: bold;
+}
+
+.card-title:active {
+	background-color: rgba(0,0,0,.05);
+}
+
+.card-media {
+	margin-bottom: 16px;
+}
+
+.card-media > * {
+	display: block;
+}
+
+.card-content {
+	padding: 0 16px 16px;
+}
+
+.card-content p {
+	margin-top: 16px;
+}
+
+.card-content p:first-child {
+	margin-top: 0;
+}
+
+.card-footer {
+	padding: 4px;
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.card-button {
+	float: right;
+	background: transparent 0 center no-repeat;
+	background-size: 24px 24px;
+	height: 48px;
+	margin: 4px;
+	margin-right: 16px;
+	padding-left: 32px;
+	color: #aaa;
+	cursor: pointer;
+}
+
+.card-button:active {
+	background-color: rgba(0,0,0,.1);
+}
+
+.shadow {
+	display: none;
+	position: fixed;
+	background-color: rgba(0,0,0,.75);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 120;
+}
+
+.menu {
+	position: fixed;
+	background-color: #fff;
+	box-shadow: 2px 0 5px rgba(0,0,0,.5);
+	width: 75%;
+	max-width: 320px;
+	height: 100%;
+	top: 0;
+	left: -320px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 150;
+	transition: left .4s;
+}
+
+.menu.active {
+	left: 0;
+}
+
+.menu .profile {
+	padding: 16px;
+	border-bottom: 1px solid #ddd;
+}
+
+.profile-img {
+	display: block;
+	background: #aaa url(../img/ic_person.svg) center center no-repeat;
+	background-size: 96px 96px;
+	width: 128px;
+	height: 128px;
+	border-radius: 128px;
+	margin: 0 auto;
+}
+
+.profile-name {
+	text-align: center;
+	margin-top: 16px;
+	font-weight: bold;
+}
+
+.menu li a {
+	display: block;
+	padding: 0 16px;
+	line-height: 48px;
+	font-size: 14px;
+	font-weight: 400;
+	border-bottom: 1px solid #ddd;
+}
+
+.menu li a:active {
+	background-color: rgba(0,0,0,.1);
+}
+
+.menu-icon {
+	display: inline-block;
+	background: #C0A832 center center no-repeat;
+	background-size: 16px 16px;
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	vertical-align: middle;
+	margin-right: 16px;
+}
+
+.search-icon { background-image: url(../img/ic_search.svg); }
+.add-icon { background-image: url(../img/ic_add.svg); }
+.group-icon { background-image: url(../img/ic_group.svg); background-color: #aaa; }
+
+.menu-button { background-image: url(../img/ic_menu.svg); float: left; width: 48px; }
+.search-button { background-image: url(../img/ic_search.svg) }
+.more-button { background-image: url(../img/ic_more.svg) }
+.heart-button { background-image: url(../img/ic_heart.svg) }
+.heart-button.active { background-image: url(../img/ic_heart_active.svg) }
+.comment-button { background-image: url(../img/ic_comment.svg) }
+.comment-button.active { background-image: url(../img/ic_comment_active.svg) }
+.check-button { background-image: url(../img/ic_check.svg) }
+.check-button.active { background-image: url(../img/ic_check_active.svg) }
+
+.posts header, .posts .add-button { background-color: #422D84; }
+.dates header, .dates .add-button { background-color: #289A28; }
+.contacts header, .contacts .add-button { background-color: #C03232; }
+
+.layer1 {
+	z-index: 1;
+	box-shadow: 0 1px 3px rgba(0,0,0,.26);
+}
+
+.layer2 {
+	z-index: 10;
+	box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.layer3 {
+	z-index: 100;
+	box-shadow: 0 3px 10px rgba(0,0,0,.26);
+}
+
+.hidden-text {
+	display: none;
+}
+
+@media screen and (max-width: 760px) {
+	.scroll-down header {
+		top: -56px;
+	}
+
+	.header-title {
+		font-size: 20px;
+		line-height: 56px;
+	}
+
+	.header-button {
+		background-size: 24px 24px;
+		margin: 4px;
+	}
+
+	.tabs {
+		margin-left: 0;
+	}
+
+	.tabs li {
+		width: 33.33%;
+	}
+
+	.tabs li a {
+		padding: 0;
+	}
+
+	.card, .date {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
